@@ -103,7 +103,7 @@ def extractHashes(game, input):
 							hashValue += "." + readStrFromFile(f, offset2, 0x4).upper()[::-1]
 							offset2 += 0x4
 							hashDependsSize = readLongFromFile(f, offset2)
-							offset2 += 0x14 + hashDependsSize
+							offset2 += 0x10 + hashDependsSize
 							hashes.append(hashValue)
 	hashes = list(set(hashes))
 	hashesString = ""
